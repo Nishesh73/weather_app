@@ -5,7 +5,7 @@ import 'package:http/http.dart';
 
 void main() {
   runApp(const MaterialApp(
-    debugShowCheckedModeBanner: true,
+    debugShowCheckedModeBanner: false,
 
     home:MyWeather() ,
   ));
@@ -71,7 +71,7 @@ var description;
           Text("Temperature of ktm valley",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
           
 
-          Text(temp!=null?"Temperature is: $temp":"loading",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
+          Text(temp!=null?"Temperature is: ${temp.substring(0,5)}":"loading",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
           Text(description!=null?"Description is: $description":"loading",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
         ]),
       ),
